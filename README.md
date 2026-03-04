@@ -1,5 +1,7 @@
 # gotoon - JSON-to-TOON Persistent Proxy
 
+![Go CI](https://github.com/fm4tt0s/gotoon/actions/workflows/ci.yml/badge.svg)
+
 A high-performance, go-based translation layer designed to bridge standard JSON payloads with the [**TOON (Token-Efficient Object Notation)**](https://openapi.com/blog/what-the-toon-format-is-token-oriented-object-notation) format. This proxy is built for high-throughput environments where token efficiency and persistent connection management are critical, such as **LLM context window optimization**, resource-constrained **IoT signaling**, or high-scale **SRE logging**.
 
 ## Key Architectural Features
@@ -7,7 +9,7 @@ A high-performance, go-based translation layer designed to bridge standard JSON 
 * **Generic Tabular Transformation**: Automatically detects uniform JSON arrays and converts them into the TOON tabular format (`key[count]{fields}:`) for significant token savings.
 * **Persistent Connection Management**: Reuses a single backend TCP pipe to the TOON target, minimizing the overhead of repeated TCP handshakes.
 * **SRE-Focused Observability**: Built-in thread-safe metrics for real-time tracking of transaction throughput and connection stability.
-* **Self-Healing Heartbeat**: A background goroutine sends periodic pulses to keep connections "hot" and prevent stateful firewalls from killing idle pipes.
+* **Self-Healing Heartbeat**: A background Go routine sends periodic pulses to keep connections "hot" and prevent stateful firewalls from killing idle pipes.
 * **Thread-Safe Concurrency**: Employs `sync.Mutex` protection to ensure strict data ordering and prevent payload interleaving during high-concurrency bursts.
 
 ---

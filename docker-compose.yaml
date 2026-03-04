@@ -4,8 +4,8 @@ services:
   gotoon:
     build: .
     ports:
-      - "8080:8080"   # JSON Inbound
-      - "2112:2112"   # Prometheus (if integrated)
+      - "8080:8080"   # JSON inbound
+      - "2112:2112"   # Prometheus (if integrated, planned for future)
     command: ["./gotoon", "-l", "8080", "-t", "toon-target:9999"]
     depends_on:
       - toon-target

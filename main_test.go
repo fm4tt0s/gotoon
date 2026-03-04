@@ -10,7 +10,7 @@ func TestConvertToToon(t *testing.T) {
 		name     string
 		input    interface{}
 		key      string
-		expected []string // Use slices to check for containing strings (order of maps is random in Go)
+		expected []string // use slices to check for containing strings (order of maps is random in Go)
 	}{
 		{
 			name:  "Simple Object",

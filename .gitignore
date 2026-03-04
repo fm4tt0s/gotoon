@@ -1,0 +1,40 @@
+# binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# the gotoon binary
+gotoon
+
+# test binary, built by `go test -c`
+*.test
+
+# output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# dependency directories
+# vendor/
+
+# go workspace file
+go.work
+
+# docker-related
+.docker
+*.log
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE/editor specific
+.idea/
+.vscode/
+*.swp
+*.swo

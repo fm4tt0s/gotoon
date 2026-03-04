@@ -11,7 +11,7 @@ import (
 	"time"
 )
 
-// Metrics for SRE observability
+// metrics for SRE observability
 type ProxyMetrics struct {
 	TotalRequests    uint64
 	HeartbeatSuccess uint64
@@ -109,7 +109,7 @@ func startHeartbeat(interval time.Duration) {
 	}
 }
 
-// Observability goroutine: Prints an executive summary every 60 seconds
+// observability Go routine: Prints an executive summary every 60 seconds
 func logMetrics(interval time.Duration) {
 	ticker := time.NewTicker(interval)
 	for range ticker.C {
