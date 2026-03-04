@@ -114,7 +114,7 @@ func logMetrics(interval time.Duration) {
 	ticker := time.NewTicker(interval)
 	for range ticker.C {
 		metrics.mu.Lock()
-		log.Printf("[METRICS] Req: %d | HB Success: %d | HB Fail: %d", 
+		log.Printf("[METRICS] Req: %d | HB Success: %d | HB Fail: %d",
 			metrics.TotalRequests, metrics.HeartbeatSuccess, metrics.HeartbeatFail)
 		metrics.mu.Unlock()
 	}
